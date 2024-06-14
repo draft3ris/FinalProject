@@ -29,7 +29,7 @@ public class RockScissorsPaper {
                 break;
             } catch (Exception e) {
                 System.out.println("Invalid input. Please enter a number between 1 and 3.");
-                scn.next();
+                scn.nextLine();
             }
         }
 

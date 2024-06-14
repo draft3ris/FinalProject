@@ -15,13 +15,20 @@ public class UpDown {
 
     public void doGame() {
         System.out.println("Number Up and Down Game");
-
+        int num;
         while (count > 0) {
             System.out.print("Input number (1~100) > ");
-            int num = scn.nextInt();
+            
+            try{
+                num = scn.nextInt();
 
-            if (num < 1 || num > 100) {
-                System.out.println("Please enter a number between 1 and 100.");
+                if (num < 1 || num > 100) {
+                    throw new IllegalArgumentException("Please enter a number between 1 and 100.");
+                }
+            }
+            catch(Exception e){
+                System.out.println("Error! Invalid Input! Please enter a number between 1 and 100.");
+                scn.nextLine();
                 continue;
             }
 
